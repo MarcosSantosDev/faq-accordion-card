@@ -22,7 +22,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 60%;
+    grid-template-columns: 80%;
     grid-template-rows: calc(100% - 50px) 50px;
     grid-template-areas: "faq-accordion-card" "footer";
     justify-content: center;
@@ -37,51 +37,31 @@ body {
     grid-area: faq-accordion-card;
 
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "images faq-form";
-    grid-column-gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "images" "faq-form";
+    grid-template-rows: auto 1fr;
+    justify-content: center;
 
     background-color: #FFF;
     width: 100%;
-    height: 450px;
+    height: 500px;
     border-radius: 20px;
-}
-
-.content-faq_accordion_images {
-    grid-area: images;
-    background:
-        url("./images/illustration-woman-online-desktop.svg") -70px 60px/410px no-repeat,
-        url("./images/bg-pattern-desktop.svg") -360px -145px/700px no-repeat
-}
-
-.content-faq_accordion_images .illustration-box {
-    background-image: url("./images/illustration-box-desktop.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    display: block;
-    position: absolute;
-    top: 40%;
-    left: 15%;
-    max-width: 120px;
-    max-height: 120px;
-    width: 100%;
-    height: 100%;
 }
 
 .content-faq_accordion_form {
     grid-area: faq-form;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .content-faq_accordion_form h1 {
     font-size: 30px;
     color: var(--primay-dark-desaturated-blue);
 }
 
-.content-faq_accordion_form article {    
+.content-faq_accordion_form article {
     width: 80%;
 }
 
@@ -136,4 +116,60 @@ body {
 
 .attribution a {
     color: var(--primay-dark-desaturated-blue);
+}
+
+@media(min-width: 1024px) {
+    .content-faq_accordion_card {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "images faq-form";
+        grid-template-rows: 1fr;
+    }
+
+    .content-faq_accordion_images {
+        grid-area: images;
+        background:
+            url("./images/illustration-woman-online-desktop.svg") -70px 60px/410px no-repeat,
+            url("./images/bg-pattern-desktop.svg") -360px -145px/700px no-repeat;
+    }
+
+    .content-faq_accordion_images .illustration-box {
+        background-image: url("./images/illustration-box-desktop.svg");
+        background-size: contain;
+        display: block;
+        position: absolute;
+        top: 38%;
+        left: 5%;
+        max-width: 120px;
+        max-height: 120px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .illustration-box-mobile {
+        display: none;
+    }
+}
+
+@media(max-width: 1024px) {
+    .content-faq_accordion_card {
+        margin-top: 22%;
+    }
+
+    .content-faq_accordion_images {
+        grid-area: images;
+        background:
+            url("./images/bg-pattern-mobile.svg") 52% 0px/230px no-repeat;
+        height: 115px;
+    }
+
+    .illustration-box-mobile {
+        grid-area: images;
+        margin-top: -100px;
+        width: 230px;
+        height: 180px;
+    }
+
+    .content-faq_accordion_form {
+        align-items: center;
+    }
 }
