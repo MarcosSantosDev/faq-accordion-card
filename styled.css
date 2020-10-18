@@ -61,11 +61,11 @@ body {
     color: var(--primay-dark-desaturated-blue);
 }
 
-.content-faq_accordion_form article {
+.content-faq_accordion_form .accordion_form {
     width: 80%;
 }
 
-.content-faq_accordion_form article ul {
+.content-faq_accordion_form .accordion_form ul {
     list-style: none;
     padding: 0;
     margin: 0;
