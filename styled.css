@@ -118,6 +118,11 @@ body {
     color: var(--primay-dark-desaturated-blue);
 }
 
+.illustration-box-mobile {
+    display: flex;
+    justify-content: center;
+}
+
 @media(min-width: 1024px) {
     .content-faq_accordion_card {
         grid-template-columns: repeat(2, 1fr);
@@ -147,7 +152,7 @@ body {
         height: 100%;
     }
 
-    .illustration-box-mobile {
+    .illustration-box-mobile-image {
         display: none;
     }
 }
@@ -164,7 +169,7 @@ body {
         height: 115px;
     }
 
-    .illustration-box-mobile {
+    .illustration-box-mobile-image {
         grid-area: images;
         margin-top: -100px;
         width: 230px;
