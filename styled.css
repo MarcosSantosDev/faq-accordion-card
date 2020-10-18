@@ -1,0 +1,92 @@
+:root {
+    --primay-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --primay-soft-red: hsl(14, 88%, 65%);
+    --primay-soft-violet: hsl(273, 75%, 66%);
+    --primay-soft-blue: hsl(240, 73%, 65%);
+    --neutral-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --neutral-dark-grayish-blue: hsl(240, 6%, 50%);
+    --neutral-light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 60%;
+    grid-template-rows: calc(100% - 50px) 50px;
+    grid-template-areas: "faq-accordion-card" "footer";
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, var(--primay-soft-violet),  var(--primay-soft-blue));
+    width: 100vw;
+    height: 100vh;
+}
+
+.content-faq_accordion_card {
+    grid-area: faq-accordion-card;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "images faq-form";
+    grid-column-gap: 40px;
+    background-color: #FFF;
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.content-faq_accordion_images {
+    grid-area: images;
+    background:
+        url("./images/illustration-woman-online-desktop.svg") -70px 60px/410px no-repeat,
+        url("./images/bg-pattern-desktop.svg") -360px -145px/700px no-repeat
+}
+
+.content-faq_accordion_images .illustration-box {
+    background-image: url("./images/illustration-box-desktop.svg");    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    max-width: 120px;
+    max-height: 120px;
+    width: 100%;
+    height: 100%;
+}
+
+.content-faq_accordion_form {
+    grid-area: faq-form;
+    padding-top: 20px;
+}
+
+.content-faq_accordion_form, h1 {
+    font-size: 30px;
+    color: var(--primay-dark-desaturated-blue);
+}
+
+.content-faq_accordion_form article {    
+    width: 80%;
+    height: 50px;
+    border-bottom: 1px solid var(--neutral-light-grayish-blue);
+    font-size: 11px;
+}
+
+.attribution {
+    grid-area: footer;
+    font-size: 14px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--primay-dark-desaturated-blue);
+}
