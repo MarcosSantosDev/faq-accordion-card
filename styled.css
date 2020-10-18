@@ -128,19 +128,21 @@ body {
     .content-faq_accordion_images {
         grid-area: images;
         background:
-            url("./images/illustration-woman-online-desktop.svg") -70px 60px/410px no-repeat,
+            url("./images/illustration-woman-online-desktop.svg") -70px 90px/410px no-repeat,
             url("./images/bg-pattern-desktop.svg") -360px -145px/700px no-repeat;
     }
 
     .content-faq_accordion_images .illustration-box {
         background-image: url("./images/illustration-box-desktop.svg");
         background-size: contain;
+        background-repeat: no-repeat;
+
         display: block;
         position: absolute;
-        top: 38%;
-        left: 5%;
-        max-width: 120px;
-        max-height: 120px;
+        top: 40%;
+        left: 4%;
+        max-width: 160px;
+        max-height: 160px;
         width: 100%;
         height: 100%;
     }
