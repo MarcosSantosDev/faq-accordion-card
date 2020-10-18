@@ -22,7 +22,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 80%;
+    grid-template-columns: 70%;
     grid-template-rows: calc(100% - 50px) 50px;
     grid-template-areas: "faq-accordion-card" "footer";
     justify-content: center;
@@ -44,7 +44,7 @@ body {
 
     background-color: #FFF;
     width: 100%;
-    height: 500px;
+    height: 75%;
     border-radius: 20px;
 }
 
@@ -139,10 +139,10 @@ body {
 
         display: block;
         position: absolute;
-        top: 40%;
-        left: 4%;
-        max-width: 160px;
-        max-height: 160px;
+        top: 44%;
+        left: 10%;
+        max-width: 152px;
+        max-height: 152px;
         width: 100%;
         height: 100%;
     }
@@ -173,5 +173,9 @@ body {
 
     .content-faq_accordion_form {
         align-items: center;
+    }
+    
+    .content-faq_accordion_form h1 {
+        margin: 0;
     }
 }
